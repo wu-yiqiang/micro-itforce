@@ -1,5 +1,5 @@
 <template>
-  <a-config-provider :locale="locale">
+  <a-config-provider prefix-cls="app-main" :locale="locale">
     <router-view />
     <global-setting />
   </a-config-provider>

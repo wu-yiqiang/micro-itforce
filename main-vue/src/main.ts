@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import ArcoVue from '@arco-design/web-vue';
 import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import globalComponents from '@/components';
+import microApp from '@micro-zoe/micro-app';
 import router from './router';
 import store from './store';
 import i18n from './locale';
@@ -14,6 +15,19 @@ import App from './App.vue';
 import '@/assets/style/global.less';
 import '@/api/interceptor';
 
+microApp.start({ 
+  // 关闭虚拟路由
+    'disable-memory-router': true,
+    // 设置子应用生周期
+    lifeCycles: {
+        created() { },
+        beforemount() { },
+        mounted() { },
+        unmounted() { },
+        error() {},
+    }
+
+});
 const app = createApp(App);
 
 app.use(ArcoVue, {});
