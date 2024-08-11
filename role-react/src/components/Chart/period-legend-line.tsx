@@ -7,8 +7,10 @@ import useBizTheme from '@/utils/useChartTheme';
 const lineColor = ['#21CCFF', '#313CA9', '#249EFF'];
 function PeriodLine({ data, loading }: { data: any[]; loading: boolean }) {
   return (
-    <Spin loading={loading} style={{ width: '100%' }}>
-      <Chart
+    // <Spin loading={loading} style={{ width: '100%' }}>
+      
+    // </Spin>
+    <Chart
         theme={useBizTheme()}
         forceUpdate
         height={370}
@@ -74,7 +76,6 @@ function PeriodLine({ data, loading }: { data: any[]; loading: boolean }) {
           }}
         />
       </Chart>
-    </Spin>
   );
 }
 

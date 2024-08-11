@@ -219,9 +219,9 @@ function PageLayout() {
       >
         <Navbar show={showNavbar} />
       </div>}
-      {userLoading ? (
+      {/* {userLoading ? (
         <Spin className={styles['spin']} />
-      ) : (
+      ) : ( */}
         <Layout>
           { !isMicroApp() && showMenu && (
             <Sider
@@ -280,17 +280,17 @@ function PageLayout() {
                   <Route exact path="/">
                     <Redirect to={`/${defaultRoute}`} />
                   </Route>
-                  <Route
+                  {/* <Route
                     path="*"
                     component={lazyload(() => import('./pages/exception/403'))}
-                  />
+                  /> */}
                 </Switch>
               </Content>
             </div>
             {showFooter && <Footer />}
           </Layout>
         </Layout>
-      )}
+      {/* )} */}
     </Layout>
   );
 }

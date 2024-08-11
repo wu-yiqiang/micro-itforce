@@ -23,6 +23,8 @@ export default {
   'navbar.action.locale': '切换为中文',
   'role.role': '角色',
   'role.role-manager': '角色管理',
+  'permission.permission': '权限',
+  'permission.permission-manager': '权限管理',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,

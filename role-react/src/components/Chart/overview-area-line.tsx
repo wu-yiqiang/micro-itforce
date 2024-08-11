@@ -15,8 +15,10 @@ function OverviewAreaLine({
   color?: string;
 }) {
   return (
-    <Spin loading={loading} style={{ width: '100%' }}>
-      <Chart
+    // <Spin loading={loading} style={{ width: '100%' }}>
+     
+    // </Spin>
+     <Chart
         scale={{ value: { min: 0 } }}
         padding={[10, 20, 50, 40]}
         autoFit
@@ -76,7 +78,6 @@ function OverviewAreaLine({
           }}
         </Tooltip>
       </Chart>
-    </Spin>
   );
 }
 

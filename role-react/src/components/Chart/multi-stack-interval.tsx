@@ -5,8 +5,10 @@ import CustomTooltip from './customer-tooltip';
 
 function MultiInterval({ data, loading }: { data: any[]; loading: boolean }) {
   return (
-    <Spin loading={loading} style={{ width: '100%' }}>
-      <Chart
+    // <Spin loading={loading} style={{ width: '100%' }}>
+     
+    // </Spin>
+     <Chart
         height={370}
         padding="auto"
         data={data}
@@ -37,7 +39,6 @@ function MultiInterval({ data, loading }: { data: any[]; loading: boolean }) {
         />
         <Legend name="name" marker={{ symbol: 'circle' }} />
       </Chart>
-    </Spin>
   );
 }
 

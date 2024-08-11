@@ -87,8 +87,10 @@ function DropContent() {
 
   return (
     <div className={styles['message-box']}>
-      <Spin loading={loading} style={{ display: 'block' }}>
-        <Tabs
+      {/* <Spin loading={loading} style={{ display: 'block' }}>
+        
+      </Spin> */}
+      <Tabs
           overflow="dropdown"
           type="rounded"
           defaultActiveTab="message"
@@ -127,7 +129,6 @@ function DropContent() {
             );
           })}
         </Tabs>
-      </Spin>
     </div>
   );
 }

@@ -14,8 +14,10 @@ const lineColorMap = ['#722ED1', '#33D1C9', '#F77234', '#165DFF'];
 
 function MultiAreaLine({ data, loading }: { data: any[]; loading: boolean }) {
   return (
-    <Spin loading={loading} style={{ width: '100%' }}>
-      <Chart
+    // <Spin loading={loading} style={{ width: '100%' }}>
+      
+    // </Spin>
+    <Chart
         height={352}
         data={data}
         padding={[10, 0, 30, 30]}
@@ -56,7 +58,6 @@ function MultiAreaLine({ data, loading }: { data: any[]; loading: boolean }) {
         />
         <Legend visible={false} />
       </Chart>
-    </Spin>
   );
 }
 

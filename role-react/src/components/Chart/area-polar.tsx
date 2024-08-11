@@ -31,7 +31,7 @@ function AreaPolar(props: AreaPolarProps) {
   });
 
   return (
-    <Spin loading={loading} style={{ width: '100%' }}>
+    // <Spin loading={loading} style={{ width: '100%' }}>
       <Chart
         height={height || 400}
         padding={0}
@@ -85,7 +85,7 @@ function AreaPolar(props: AreaPolarProps) {
           name="category"
         />
       </Chart>
-    </Spin>
+    // </Spin>
   );
 }
 

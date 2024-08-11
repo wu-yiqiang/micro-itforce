@@ -40,8 +40,10 @@ function HorizontalInterval({
   });
 
   return (
-    <Spin loading={loading} style={{ width: '100%' }}>
-      <Chart
+    // <Spin loading={loading} style={{ width: '100%' }}>
+      
+    // </Spin>
+    <Chart
         height={height || 370}
         padding="auto"
         data={data}
@@ -69,7 +71,6 @@ function HorizontalInterval({
           }}
         />
       </Chart>
-    </Spin>
   );
 }
 

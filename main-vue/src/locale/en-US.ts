@@ -23,6 +23,8 @@ export default {
   'navbar.action.locale': 'Switch to English',
   'role.role': 'Role',
   'role.role-manager': 'Role Manager',
+  'permission.permission': 'Permission',
+  'permission.permission-manager': 'Permission Manager',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,
