@@ -23,14 +23,6 @@ const router = createRouter({
         requiresAuth: false,
       },
     },
-    {
-      path: '/ai-app/',
-      name: 'ai',
-      component: () => import('@/app/ai-app.vue'),
-      meta: {
-        requiresAuth: false,
-      },
-    },
     ...appRoutes,
     REDIRECT_MAIN,
     NOT_FOUND_ROUTE,

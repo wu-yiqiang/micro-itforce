@@ -21,6 +21,8 @@ export default {
   'menu.faq': 'FAQ',
   'navbar.docs': 'Docs',
   'navbar.action.locale': 'Switch to English',
+  'role.role': 'Role',
+  'role.role-manager': 'Role Manager',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,

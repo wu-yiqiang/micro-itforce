@@ -21,6 +21,8 @@ export default {
   'menu.faq': '常见问题',
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',
+  'role.role': '角色',
+  'role.role-manager': '角色管理',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,

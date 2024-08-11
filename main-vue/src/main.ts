@@ -20,12 +20,12 @@ microApp.start({
     'disable-memory-router': true,
     // 设置子应用生周期
     lifeCycles: {
-        created() { },
-        beforemount() { },
-        mounted() { },
-        unmounted() { },
-        error() {},
-    }
+      created() { },
+      beforemount() { },
+      mounted() { },
+      unmount() { },
+      error() {},
+  }
 
 });
 const app = createApp(App);

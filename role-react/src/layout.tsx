@@ -26,7 +26,7 @@ import getUrlParams from './utils/getUrlParams';
 import lazyload from './utils/lazyload';
 import { GlobalState } from './store';
 import styles from './style/layout.module.less';
-
+import {isMicroApp} from '@/common/index'
 const MenuItem = Menu.Item;
 const SubMenu = Menu.SubMenu;
 console.log('asd', MenuItem)
@@ -217,7 +217,7 @@ function PageLayout() {
           [styles['layout-navbar-hidden']]: !showNavbar,
         })}
       >
-        <Navbar show={showNavbar} />
+        {isMicroApp() ? null : <Navbar show={showNavbar} />}
       </div>
       {userLoading ? (
         <Spin className={styles['spin']} />
