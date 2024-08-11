@@ -57,6 +57,18 @@ export const getName = (path: string, routes) => {
   });
 };
 
+export const getPathKey = (pathKeys ,routes) => {
+  for (const index in routes) {
+    if (Object.prototype.hasOwnProperty.call(routes, index)) {
+      const item = routes[index];
+      pathKeys.push(item.key)
+      if (item?.children?.length) {
+        getPathKey(pathKeys,item.children)
+      }
+    }
+  }
+};
+
 export const generatePermission = (role: string) => {
   const actions = role === 'admin' ? ['*'] : ['read'];
   const result = {};
@@ -114,7 +126,8 @@ const useRoute = (userPermission): [IRoute[], string] => {
     }
     return '';
   }, [permissionRoute]);
-
+  const pathKeys = []
+  getPathKey(pathKeys, routes)
   return [permissionRoute, defaultRoute];
 };
 

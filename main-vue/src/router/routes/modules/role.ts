@@ -13,7 +13,7 @@ const Role: AppRouteRecordRaw = {
   },
   children: [
     {
-      path: '/role-manager',
+      path: '/role/role-manager',
       name: 'role-manager',
       component: () => import('@/micro-app/role-app.vue'),
       meta: {

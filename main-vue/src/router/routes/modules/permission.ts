@@ -13,7 +13,7 @@ const Permission: AppRouteRecordRaw = {
   },
   children: [
     {
-      path: '/permission-manager',
+      path: '/permission/permission-manager',
       name: 'permission-manager',
       component: () => import('@/micro-app/permission-app.vue'),
       meta: {

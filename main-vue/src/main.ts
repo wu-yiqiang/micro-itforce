@@ -17,14 +17,14 @@ import '@/api/interceptor';
 
 microApp.start({ 
   // 关闭虚拟路由
-    'disable-memory-router': true,
-    // 设置子应用生周期
-    lifeCycles: {
-      created() { },
-      beforemount() { },
-      mounted() { },
-      unmount() { },
-      error() {},
+  'disable-memory-router': true,
+  // 设置子应用生周期
+  lifeCycles: {
+    created() {},
+    beforemount() {},
+    mounted() {},
+    unmount() {},
+    error() {},
   }
 
 });
