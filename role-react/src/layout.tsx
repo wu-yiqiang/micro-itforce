@@ -212,18 +212,18 @@ function PageLayout() {
   }, [pathname]);
   return (
     <Layout className={styles.layout}>
-      <div
+      {isMicroApp() ? null : <div
         className={cs(styles['layout-navbar'], {
           [styles['layout-navbar-hidden']]: !showNavbar,
         })}
       >
-        {isMicroApp() ? null : <Navbar show={showNavbar} />}
-      </div>
+        <Navbar show={showNavbar} />
+      </div>}
       {userLoading ? (
         <Spin className={styles['spin']} />
       ) : (
         <Layout>
-          {showMenu && (
+          { !isMicroApp() && showMenu && (
             <Sider
               className={styles['layout-sider']}
               width={menuWidth}
@@ -253,7 +253,7 @@ function PageLayout() {
               </div>
             </Sider>
           )}
-          <Layout className={styles['layout-content']} style={paddingStyle}>
+          <Layout className={styles['layout-content']} style={isMicroApp() ? null : paddingStyle}>
             <div className={styles['layout-content-wrapper']}>
               {!!breadcrumb.length && (
                 <div className={styles['layout-breadcrumb']}>
