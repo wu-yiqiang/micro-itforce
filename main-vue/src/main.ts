@@ -18,6 +18,15 @@ import '@/api/interceptor';
 microApp.start({ 
   // 关闭虚拟路由
   'disable-memory-router': true,
+  // 预加载
+  preFetchApps: [
+    {
+      name: 'permission-manager',
+      url: 'http://localhost:3393/permission-manager',
+      level: 3,
+      iframe: true 
+    }
+  ],
   // 设置子应用生周期
   lifeCycles: {
     created() {},

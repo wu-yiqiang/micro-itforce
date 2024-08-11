@@ -3,10 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue';
-
-onMounted(() => {
-    console.log('role ssssss')
-})
 </script>
-<style></style>
+<style></style> 
