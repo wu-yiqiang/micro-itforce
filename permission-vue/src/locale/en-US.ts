@@ -21,6 +21,8 @@ export default {
   'menu.faq': 'FAQ',
   'navbar.docs': 'Docs',
   'navbar.action.locale': 'Switch to English',
+  'permission.permission': 'Permission',
+  'permission.permission-manager': 'Permission Manager',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,

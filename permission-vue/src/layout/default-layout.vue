@@ -1,38 +1,22 @@
 <template>
   <a-layout class="layout" :class="{ mobile: appStore.hideMenu }">
-    <div v-if="navbar" class="layout-navbar">
+    <div v-if="!isMicroApp() && navbar" class="layout-navbar">
       <NavBar />
     </div>
     <a-layout>
       <a-layout>
-        <a-layout-sider
-          v-if="renderMenu"
-          v-show="!hideMenu"
-          class="layout-sider"
-          breakpoint="xl"
-          :collapsed="collapsed"
-          :collapsible="true"
-          :width="menuWidth"
-          :style="{ paddingTop: navbar ? '60px' : '' }"
-          :hide-trigger="true"
-          @collapse="setCollapsed"
-        >
+        <a-layout-sider v-if="!isMicroApp() && renderMenu" v-show="!hideMenu" class="layout-sider" breakpoint="xl" :collapsed="collapsed"
+          :collapsible="true" :width="menuWidth" :style="{ paddingTop: navbar ? '60px' : '' }" :hide-trigger="true"
+          @collapse="setCollapsed">
           <div class="menu-wrapper">
             <Menu />
           </div>
         </a-layout-sider>
-        <a-drawer
-          v-if="hideMenu"
-          :visible="drawerVisible"
-          placement="left"
-          :footer="false"
-          mask-closable
-          :closable="false"
-          @cancel="drawerCancel"
-        >
+        <a-drawer v-if="!isMicroApp() && hideMenu" :visible="drawerVisible" placement="left" :footer="false" mask-closable
+          :closable="false" @cancel="drawerCancel">
           <Menu />
         </a-drawer>
-        <a-layout class="layout-content" :style="paddingStyle">
+        <a-layout class="layout-content" :style="!isMicroApp() ? paddingStyle : ''">
           <TabBar v-if="appStore.tabBar" />
           <a-layout-content>
             <PageLayout />
@@ -45,6 +29,7 @@
 </template>
 
 <script lang="ts" setup>
+  import { isMicroApp } from '@/common/index';
   import { ref, computed, watch, provide, onMounted } from 'vue';
   import { useRouter, useRoute } from 'vue-router';
   import { useAppStore, useUserStore } from '@/store';

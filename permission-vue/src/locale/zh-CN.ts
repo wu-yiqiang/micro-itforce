@@ -21,6 +21,8 @@ export default {
   'menu.faq': '常见问题',
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',
+  'permission.permission': '权限',
+  'permission.permission-manager': '权限管理',
   ...localeSettings,
   ...localeMessageBox,
   ...localeLogin,

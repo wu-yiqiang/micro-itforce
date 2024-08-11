@@ -39,7 +39,6 @@ export default defineConfig({
   },
   server: {
     // 是否开启 https
-    https: true,
     hmr: true,
     open: true,
     // 端口号

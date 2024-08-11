@@ -7,6 +7,8 @@ export default mergeConfig(
     mode: 'development',
     server: {
       open: true,
+      hmr: true,
+      port: 3393,
       fs: {
         strict: true,
       },
