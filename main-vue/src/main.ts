@@ -24,7 +24,7 @@ microApp.start({
       name: 'permission-manager',
       url: 'http://localhost:3393/permission-manager',
       level: 3,
-      iframe: true 
+      iframe: true
     }
   ],
   // 设置子应用生周期
